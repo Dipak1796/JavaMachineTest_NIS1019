@@ -104,6 +104,16 @@ try{
 		return true;
 	}
 	
+	public static boolean checkDuplication(String name){
+		for(Product item:lstProduct){
+			if(item.getItemName().equalsIgnoreCase(name))
+				return false;
+		}
+		
+		return true;
+		
+	}
+	
 	
 
 }

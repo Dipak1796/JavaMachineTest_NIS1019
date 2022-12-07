@@ -11,8 +11,13 @@ import com.nissan.model.Product;
 public class DemoCartanaApp {
 
 	public static void main(String[] args) {
+		getMenuOfCartana();
 	
+	}
+	
+	public static void getMenuOfCartana(){
 		
+
 		Scanner scanner=new Scanner(System.in);//for except String datatype
 		Scanner scanner2=new Scanner(System.in);//for String only
 		//Created category for user
@@ -50,6 +55,11 @@ public class DemoCartanaApp {
 				//String length validation
 				if(!ProductUtility.checkString(name)){
 					System.out.println("Please Enter more character in Name");
+					name=scanner2.nextLine();
+				}
+				//duplication check
+				if(!ProductUtility.checkDuplication(name)){
+					System.out.println("This Item already exits");
 					name=scanner2.nextLine();
 				}
 				System.out.println("Enter Item buying price");
